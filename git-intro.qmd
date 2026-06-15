@@ -49,8 +49,8 @@ format:
       useTextContentForMissingTitles: false # https://github.com/quarto-dev/quarto-cli/issues/5404
     # include-after-body:
     include-in-header:
-      - text: |
-          <script src="assets/custom.js" type="application/javascript"></script>
+      # - text: |
+      #     <script src="assets/custom.js" type="application/javascript"></script>
     # https://stackoverflow.com/questions/78257697/suppressing-logo-on-specific-quarto-reveal-js-slides
       - text: |
           <style>
@@ -131,7 +131,7 @@ Git is best utilised for [plain-text]{.bg style="--col: #e64173"} files of any k
 - Code: from smaller scripts to packages and software
 - Notes: readme files, personal notes or wiki system, markdown-based articles/presentations/websites/books
   <!-- - Example: description and scripts of reference genomes -->
-- LaTeX documents (cf. Overleaf)
+- LaTeX documents (cf. [Overleaf](https://www.overleaf.com/))
 - Storing config or dot files (e.g. `.bashrc`)
 - Smaller datasets
 <!-- (e.g. `.csv` files ~ https://github.com/antigenomics/vdjdb-db/releases) -->
@@ -410,6 +410,8 @@ For more advanced terminology, like `HEAD~`, [fast-forwarding]{.bg style="--col:
 ::: aside
 Also see: https://jvns.ca/blog/2023/11/01/confusing-git-terminology/#head-head-head-head-head-2-head-2
 :::
+
+## fin {style="text-align: center;" background-color="#0a4e62" .hide-logo}
 
 <!-- https://r-cubed-intro.rostools.org/sessions/version-control
 https://pmoris.github.io/git-workshop/
