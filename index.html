@@ -283,6 +283,11 @@ Pieter Moris <a href="https://pmoris.github.io"><i class="fa-solid fa-globe" ari
 <p><img data-src="assets/img/phd101212s.gif" class="fragment quarto-figure quarto-figure-right" style="width:68.0%"></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="assets/img/ctrl-z.jpg" class="fragment quarto-figure quarto-figure-left" style="width:60.0%"></p>
+</figure>
+</div>
 </div>
 <p><!-- Source: https://www.quantitative-biology.ca/scooby-blame.png --> <!-- Source: PhD comics & https://neurathsboat.blog/post/git-intro/img/notFinal.gif --> <!-- Source: https://haines-lab.com/post/asdf-poetry-renv-local-python-r-environments/ --></p>
 </section>
@@ -330,7 +335,27 @@ Pieter Moris <a href="https://pmoris.github.io"><i class="fa-solid fa-globe" ari
 <section id="general-overview-1" class="slide level2 center">
 <h2>General overview</h2>
 
-<img data-src="assets/img/reproducibility-rocks-file_cycle2.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://reproducibility.rocks/materials/day2/02-git/" class="uri">https://reproducibility.rocks/materials/day2/02-git/</a></p></section></section>
+<img data-src="assets/img/reproducibility-rocks-file_cycle2.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://reproducibility.rocks/materials/day2/02-git/" class="uri">https://reproducibility.rocks/materials/day2/02-git/</a></p></section>
+<section id="learning-the-basic-add---commit---push-workflow-first-is-crucial" class="slide level2 center">
+<h2>Learning the basic <code>add</code> -&gt; <code>commit</code> -&gt; <code>push</code> workflow first is crucial</h2>
+
+<img data-src="assets/img/commit-push-add.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Read <code>git</code>’s warning and help messages carefully. Once you understand the basic syntax, they can often be very useful to (re)solve basic tasks.</p>
+</div>
+</div>
+</div>
+</section></section>
 <section>
 <section id="further-reading" class="title-slide slide level1 smaller center">
 <h1>Further reading</h1>
@@ -359,6 +384,7 @@ Pieter Moris <a href="https://pmoris.github.io"><i class="fa-solid fa-globe" ari
 <li>Great guide by British Ecological Society focused on code for research: <a href="https://assets.britishecologicalsociety.org/2025/12/BES-Reproducible-code-guide_2025.pdf" class="uri">https://assets.britishecologicalsociety.org/2025/12/BES-Reproducible-code-guide_2025.pdf</a> (also see their <a href="https://www.britishecologicalsociety.org/content/better-science-guides/">other guides</a>)</li>
 <li><a href="https://rockefelleruniversity.github.io/RU_reproducibleR/presentations/singlepage/github.html" class="uri">https://rockefelleruniversity.github.io/RU_reproducibleR/presentations/singlepage/github.html</a></li>
 <li><a href="https://reproducibility-workshop.readthedocs.io/en/latest/day-1/exercise-4-git.html" class="uri">https://reproducibility-workshop.readthedocs.io/en/latest/day-1/exercise-4-git.html</a></li>
+<li><a href="https://hwheeler01.github.io/CompBio/github/" class="uri">https://hwheeler01.github.io/CompBio/github/</a></li>
 <li>I could keep going…</li>
 </ul>
 </section>
@@ -389,14 +415,17 @@ Pieter Moris <a href="https://pmoris.github.io"><i class="fa-solid fa-globe" ari
 <section id="setup-and-config" class="slide level2 center">
 <h2>Setup and config</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="co"># set username to be associated with commits</span></span>
-<span id="cb1-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'BRC-RU'</span></span>
+<span id="cb1-2"><a href=""></a><span class="ex">$</span> git config <span class="at">--global</span> user.name <span class="st">'Sirocco'</span></span>
 <span id="cb1-3"><a href=""></a></span>
-<span id="cb1-4"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code># set email to be associated with commits
-git config --global user.email 'brc@rockefeller.edu'
-
-# show email
-git config --global user.email</code></pre>
+<span id="cb1-4"><a href=""></a><span class="ex">$</span> git config <span class="at">--global</span> user.name</span>
+<span id="cb1-5"><a href=""></a><span class="ex">Sirocco</span></span>
+<span id="cb1-6"><a href=""></a></span>
+<span id="cb1-7"><a href=""></a><span class="co"># set email to be associated with commits</span></span>
+<span id="cb1-8"><a href=""></a><span class="ex">$</span> git config <span class="at">--global</span> user.email <span class="st">'party.parrot@doc.govt.nz'</span></span>
+<span id="cb1-9"><a href=""></a></span>
+<span id="cb1-10"><a href=""></a><span class="co"># show email</span></span>
+<span id="cb1-11"><a href=""></a><span class="ex">$</span> git config <span class="at">--global</span> user.email</span>
+<span id="cb1-12"><a href=""></a><span class="ex">party.parrot@doc.govt.nz</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <!-- ## GUI vs CLI -->
 <aside><div>
@@ -475,7 +504,12 @@ git config --global user.email</code></pre>
 <li><a href="https://pmoris.github.io/git-workshop/chapters/6-collaboration.html" class="uri">https://pmoris.github.io/git-workshop/chapters/6-collaboration.html</a></li>
 <li><a href="https://reproducibility.rocks/materials/day2/02-git/#collaborating-with-others" class="uri">https://reproducibility.rocks/materials/day2/02-git/#collaborating-with-others</a></li>
 <li><a href="https://swcarpentry.github.io/git-novice/08-collab.html" class="uri">https://swcarpentry.github.io/git-novice/08-collab.html</a></li>
+<li><a href="https://coderefinery.github.io/git-collaborative/" class="uri">https://coderefinery.github.io/git-collaborative/</a></li>
 </ul>
+</section>
+<section id="be-careful-when-using---force" class="slide level2 center">
+<h2>Be careful when using <code>--force</code></h2>
+<p><img data-src="https://www.codeitbro.com/wp-content/uploads/2025/08/blame-git-for-everything-meme.webp"> <img data-src="https://www.codeitbro.com/wp-content/uploads/2025/08/sometimes-you-dont-fix-it-git-meme.webp"></p>
 </section>
 <section id="git-stash" class="slide level2 center">
 <h2><code>git stash</code></h2>
@@ -518,11 +552,11 @@ git config --global user.email</code></pre>
 </section>
 <section id="up-to-date-does-not-mean-what-you-think-it-means" class="slide level2 smaller center">
 <h2>Up-to-date does not mean what you think it means</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">$</span> git status</span>
-<span id="cb3-2"><a href=""></a><span class="ex">On</span> branch master</span>
-<span id="cb3-3"><a href=""></a><span class="ex">Your</span> branch is up-to-date with <span class="st">'origin/master'</span>.</span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a><span class="ex">nothing</span> to commit, working directory clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="ex">$</span> git status</span>
+<span id="cb2-2"><a href=""></a><span class="ex">On</span> branch master</span>
+<span id="cb2-3"><a href=""></a><span class="ex">Your</span> branch is up-to-date with <span class="st">'origin/master'</span>.</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a><span class="ex">nothing</span> to commit, working directory clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <!-- https://www.git-tower.com/learn/git/faq/track-remote-upstream-branch -->
 <!-- When git status says up-to-date, it means "up-to-date with the ref/branch that the current branch tracks", which in this case means "up-to-date with the local ref called origin/master". That only equates to "up-to-date with the upstream status that was retrieved last time we did a fetch" which is not the same as "up-to-date with the latest live status of the upstream".
 
@@ -566,7 +600,8 @@ It's telling you about the ref, which is just a commit ID stored on your local f
 <h2>Checkout and detached head</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://i.sstatic.net/6mrfN.jpg" class="quarto-figure quarto-figure-center" style="width:75.0%"></p>
+<p><img data-src="https://i.sstatic.net/6mrfN.jpg" class="" style="width:75.0%"></p>
+<figcaption>Source: <a href="https://stackoverflow.com/a/58142219">MarianD - StackOverflow</a></figcaption>
 </figure>
 </div>
 
